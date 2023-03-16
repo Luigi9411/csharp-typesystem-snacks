@@ -1,13 +1,14 @@
-﻿//snack1();
-//snack2();
-//snack3();
-//snack4();
-//snack5();
-//snack6();
-//snack8();
+﻿snack1();
+snack2();
+snack3();
+snack4();
+snack5();
+snack6();
+snack8();
 snack9();
-//snack10();
-//snack11();
+snack10();
+snack11();
+snack12();
 void snack1()
 {
     Console.WriteLine("Inserisci un numero ");
@@ -213,6 +214,58 @@ void snack10()
         Console.WriteLine();
     }
 }
+
+void snack11()
+{
+   
+        Console.Write("Inserisci la prima parola: ");
+        string word1 = Console.ReadLine();
+
+        Console.Write("Inserisci la seconda parola: ");
+        string word2 = Console.ReadLine();
+
+        if (Checklength(word1, word2))
+        {
+            Console.WriteLine($"Le due parole '{word1}' e '{word2}' hanno la stessa lunghezza.");
+        }
+        else
+        {
+            string longerWord = (word1.Length > word2.Length) ? word1 : word2;
+            Console.WriteLine($"La parola più lunga è: '{longerWord}'.");
+        }
+    
+    bool Checklength(string word1, string word2)
+    {
+        return word1.Length == word2.Length;
+    }
+
+}
+
+
+void CheckEvenOrOdd(int num)
+{
+    if (num % 2 == 0)
+    {
+        Console.WriteLine(num + " è pari.");
+    }
+    else
+    {
+        Console.WriteLine(num + " è dispari.");
+    }
+}
+void snack12()
+{
+
+
+    Console.Write("Inserisci un numero: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    CheckEvenOrOdd(num);
+}
+
+
+
+
+
 
 
 
