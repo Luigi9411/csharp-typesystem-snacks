@@ -3,7 +3,11 @@
 //snack3();
 //snack4();
 //snack5();
-snack6();
+//snack6();
+//snack8();
+snack9();
+//snack10();
+//snack11();
 void snack1()
 {
     Console.WriteLine("Inserisci un numero ");
@@ -116,6 +120,107 @@ void snack6()
             Console.WriteLine("Mi dispiace, " + name + ", ma il tuo isee non raggiunge la fascia minima per partecipare. Contatta il caf per eventuali disguidi.");
         }
 }
+
+void snack7()
+{
+    int[] number = new int[6]; 
+    int check = 0; 
+
+    for (int i = 0; i < 6; i++)
+    {
+        Console.WriteLine("Inserisci un numero:");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (num % 2 != 0)
+        { 
+            number[check] = num; 
+            check++; 
+        }
+    }
+
+    Console.WriteLine("I numeri dispari inseriti sono:");
+    foreach (int num in number)
+    { 
+        if (num != 0)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+
+void snack8()
+{
+    int[] num = { 61, 22, 29, 38, 45, 3, 78, 8, 14, 10 };
+    Console.WriteLine("I numeri nell'array sono: ");
+    for (int i = 0; i <= 9; i++)
+    {    
+    Console.WriteLine(num[i]);
+    }
+    int oddSum = 0;
+
+    for (int i = 0; i < num.Length; i++)
+    {
+        if (num[i] % 2 != 0) 
+        {
+            oddSum += num[i];
+        }
+    }
+
+    Console.WriteLine("La somma dispari è: " + oddSum);
+}
+
+void snack9()
+{
+    int[] num = new int[0];
+    int sum = 0;
+
+    while (sum < 50) 
+    {
+        Console.Write("Inserisci un numero: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+      
+        Array.Resize(ref num, num.Length + 1);
+        num[num.Length - 1] = n;
+
+    
+        sum = num.Sum();
+    }
+
+    Console.WriteLine("La somma degli elementi nell'array è: " + sum + " maggiore o uguale a 50.");
+}
+void snack10()
+{
+    Console.WriteLine("Inserisci un numero per generare un uguale numero di array contenenti 10 numeri: ");
+    int N = Convert.ToInt32(Console.ReadLine());
+    var random = new Random();
+
+        Console.WriteLine("Array generati: ");
+    for (int i = 0; i < N; i++)
+    {
+        var ints = new int[10];
+
+        for (int j = 0; j < 10; j++)
+        {
+            ints[j] = random.Next(1, 100);
+        }
+
+        foreach (var num in ints)
+        {
+            Console.Write($"{num},");
+        }
+
+        Console.WriteLine();
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
