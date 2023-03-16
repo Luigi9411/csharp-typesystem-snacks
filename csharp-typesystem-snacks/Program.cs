@@ -1,7 +1,9 @@
 ﻿//snack1();
-snack2();
+//snack2();
 //snack3();
-
+//snack4();
+//snack5();
+snack6();
 void snack1()
 {
     Console.WriteLine("Inserisci un numero ");
@@ -57,4 +59,62 @@ void snack3()
     }
     Console.WriteLine("La somma dei 10 numeri inseriti è: " + somma);
 }
+
+void snack4()
+{
+    int somma = 0;
+    double media = 0;
+
+    for (int i = 2; i <= 10; i++)
+    {
+        somma += i;
+    }
+
+    media = (double)somma / 9;
+
+    Console.WriteLine("La somma dei numeri da 2 a 10 è: " + somma);
+    Console.WriteLine("La media dei numeri da 2 a 10 è: " + media);
+}
+
+void snack5()
+{
+    Console.WriteLine("Inserisci un numero per verificare che sia pari e ottenere come risposta lo stesso numero se pari o il successivo se dispari");
+    int numero = Convert.ToInt32(Console.ReadLine());
+
+    if (numero % 2 == 0)
+    {
+        Console.WriteLine("Il numero inserito è pari: " + numero);
+    }
+    else
+    {
+        Console.WriteLine("Il numero inserito è dispari quindi il successivo ottenuto è: " + (numero + 1));
+    }
+}
+
+void snack6()
+{
+        string[] guests = { "Marco", "Luca", "Giovanni", "Francesca", "Chiara", "Martina" };
+        Console.WriteLine("Inserisci il tuo nome:");
+        string name = Console.ReadLine().ToLower();
+
+        bool presente = false;
+        foreach (string guest in guests)
+        {
+            if (guest.ToLower() == name)
+            {
+                presente = true;
+                break;
+            }
+        }
+
+        if (presente)
+        {
+            Console.WriteLine("Benvenuto alla festa " + name);
+        }
+        else
+        {
+            Console.WriteLine("Mi dispiace, " + name + ", ma il tuo isee non raggiunge la fascia minima per partecipare. Contatta il caf per eventuali disguidi.");
+        }
+}
+
 
